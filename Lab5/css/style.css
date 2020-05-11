@@ -1,0 +1,53 @@
+body {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(207, 255, 134);
+}
+p {
+  display: flex;
+  justify-content: center;
+}
+.photo-span {
+  flex: 1;
+  margin: 0.5rem;
+}
+.photo {
+  width: 100%;
+}
+#circle {
+  width: 10rem;
+  height: 10rem;
+  border-top: 0.5rem greenyellow solid;
+  /* border-left: 0.5rem greenyellow solid; */
+  border-radius: 50%;
+
+  /* -webkit-animation: circle-anim 3s infinite; */
+  /* -webkit-animation-timing-function: linear; */
+
+  animation: circle-anim 3s linear infinite;
+  /* animation-timing-function: linear; */
+}
+#black-screen {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+}
+@keyframes circle-anim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 658px) {
+  .photo {
+    margin-bottom: 4rem;
+  }
+}
